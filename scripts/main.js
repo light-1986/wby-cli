@@ -3,7 +3,8 @@
 const program = require('commander');
 const path = require('path')
 
-const { version } = require('./utils/constants')
+const { version } = {version: '0.0.1'}
+
 
 const actionsMap = {
     create: {

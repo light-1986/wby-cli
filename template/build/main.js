@@ -112,10 +112,11 @@ var d = _objectSpread({}, {
   e: 23
 });
 
-Object.assign({}, d);
-Object.keys(d).map((item) => {
-    return item + 1;
-})
+var ab = Object.assign({}, d);
+console.log(ab);
+Object.keys(d).map(function (item) {
+  return item + 1;
+});
 
 /***/ }),
 
