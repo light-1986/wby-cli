@@ -1,6 +1,6 @@
 const {decode, encode} = require('ini');
 const fs = require('fs');
-const { defaultConfig, configFile } = require('./utils/constants');
+const { defaultConfig, configFile } = require('./constants');
 module.exports = (action, k, v) => {
     const flag = fs.existsSync(configFile);
     const obj = {};

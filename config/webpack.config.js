@@ -11,6 +11,7 @@ console.log("webpackconfig: ", paths.appIndexJs, paths.appBuild)
     return {
         mode: 'development',
         entry:[
+            // "@babel/polyfill",
             paths.appIndexJs
         ],
         output:{
@@ -29,7 +30,10 @@ console.log("webpackconfig: ", paths.appIndexJs, paths.appBuild)
                             test: /\.(js|mjs|jsx)$/,
                             loader: require.resolve('babel-loader'),
                             options:{
-                                presets: ['@babel/preset-env']
+                                // presets: ['@babel/preset-env', {"useBuiltIns":"entry"}]
+                                presets: [["@babel/preset-env",{"useBuiltIns": "usage", "corejs":{"version":'2'}}]]
+                                // presets: [["@babel/preset-env"]]
+                                
                             }
                         }
                     ]

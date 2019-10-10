@@ -8,7 +8,6 @@ const config = require('./config');
 let downLoadGit = promisify(require('download-git-repo'));
 let ncp = promisify(require('ncp'));
 let repoUrl = config('getVal', 'repo');
-
 const MetalSmith = require('metalsmith'); // 遍历文件夹 
 let { render } = require('consolidate').ejs;
 render = promisify(render); // 包装渲染方法
@@ -31,8 +30,6 @@ const wrapFetchAddLoading = (fn, message) => async(...args) => {
     spinner.succeed();
     return result;
 }
-
-
 
 const download = async (repo, tag) => { 
     const downloadDirectory = `${process.env[process.platform === 'darwin' ? 'HOME': 'USERPROFILE']}/.template`;
