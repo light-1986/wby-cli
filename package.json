@@ -1,5 +1,5 @@
 {
-  "name": "li-cli",
+  "name": "wby-cli",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "pre-commit": "npm run lint"
   },
   "bin": {
-    "li-cli": "./scripts/index.js"
+    "wby": "./scripts/index.js"
   },
   "dependencies": {
     "@babel/core": "^7.6.2",
