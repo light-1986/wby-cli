@@ -9,11 +9,11 @@ module.exports = function(/*webpackEnv*/){
     // const isEnvProduction = webpackEnv === 'production';
     // const mode = isEnvProduction ? 'production' : isEnvDevelopment && 'development';
     // console.log("appIndexJs, appBuild : ", paths.appIndexJs, paths.appBuild)
-    const polyfillPath = path.resolve(__dirname, "../node_modules/@babel/polyfill");
+    // const polyfillPath = path.resolve(__dirname, "../node_modules/@babel/polyfill");
     return {
         mode: 'development',
         entry:[
-            polyfillPath,
+            // polyfillPath,
             paths.appIndexJs
         ],
         output:{
