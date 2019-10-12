@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-class-properties": "^7.2.0",
+    "@babel/preset-react": "^7.6.3",
     "eslint": "^6.3.0",
     "eslint-plugin-react": "^7.14.3",
     "husky": "^3.0.5"
