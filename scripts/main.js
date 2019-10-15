@@ -11,22 +11,29 @@ const actionsMap = {
         description:'crate project',
         alias : 'cr',
         examples: [
-            'li-cli create <template-name>'
+            'wby create <template-name>'
         ],
     },
     config : {
         description: 'config info',
         alias: 'c',
         examples: [
-            'li-cli config get <k>',
-            'li-cli config set <k> <v>'
+            'wby config get <k>',
+            'wby config set <k> <v>'
         ]
     },
     build : {
         description: 'build',
         alias:'bu',
         examples:[
-            'li-cli build'
+            'wby build'
+        ]
+    },
+    start : {
+        description: 'start',
+        alias:'s',
+        examples:[
+            'wby start'
         ]
     },
     '*': {

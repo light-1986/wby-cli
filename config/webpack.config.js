@@ -3,6 +3,10 @@
 // const fs = require('fs');
 const paths = require('../config/paths');
 const path = require("path")
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+
 
 module.exports = function(/*webpackEnv*/){
     // const isEnvDevelopment = webpackEnv === 'development';
@@ -18,7 +22,7 @@ module.exports = function(/*webpackEnv*/){
         ],
         output:{
             path: paths.appBuild,
-            publicPath: 'http://www.baidu.com'
+            publicPath: '/'
         },
         module: {
             rules : [
@@ -57,6 +61,14 @@ module.exports = function(/*webpackEnv*/){
                 }
             ]
         },
-        devtool:'source-map'
+        devtool:'source-map',
+        plugins: [
+            // new CleanWebpackPlugin(['dist/*']) for < v2 versions of CleanWebpackPlugin
+            // new CleanWebpackPlugin(),
+            new HtmlWebpackPlugin({
+              title: 'Development',
+              template: paths.appHtml,
+            }),
+        ],
     }
 }
